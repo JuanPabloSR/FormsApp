@@ -1,7 +1,7 @@
 <h2>Reactives: <small>Dynamics</small></h2>
 <hr />
 
-<form  autocomplete="off" >
+<form (ngSubmit)="save()" autocomplete="off" [formGroup]="myForm">
   <!-- Name -->
   <div class="mb-3 row">
     <label class="col-sm-3 col-form-label">Name</label>
@@ -9,11 +9,9 @@
       <input
         class="form-control"
         placeholder="Person Name"
+        formControlName="name"
       />
-      <span
-        class="form-text text-danger"
-
-      >
+      <span class="form-text text-danger" *ngIf="fieldIsValid('name')">
         This field is required
       </span>
     </div>
@@ -34,33 +32,20 @@
   <div class="mb-3 row">
     <label class="col-sm-3 col-form-label">Favorites</label>
     <div class="col-sm-9">
-      <div
-        class="input-group mb-1"
+      <div class="input-group mb-1">
+        <input class="form-control" />
 
-      >
-        <input
-
-
-          class="form-control "
-
-        />
-
-        <button class="btn btn-outline-danger" type="button" >Delete</button>
+        <button class="btn btn-outline-danger" type="button">Delete</button>
       </div>
     </div>
   </div>
 
   <div class="row">
     <div class="col-sm-12">
-      <button
-        class="btn btn-primary float-end"
-        type="button"
-      >
-        Save
-      </button>
+      <button class="btn btn-primary float-end" type="submit">Save</button>
     </div>
   </div>
 </form>
 
 <!-- <span>Person</span>
-<pre>{{ person | json }}</pre> -->
+<pre>{{ myForm | json }}</pre> -->
