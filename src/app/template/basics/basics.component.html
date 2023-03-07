@@ -12,7 +12,7 @@
             type="text"
             class="form-control"
             placeholder="Product name"
-            ngModel
+            [ngModel]="initForm.product"
             name="product"
             required
             minlength="3"
@@ -31,7 +31,7 @@
             type="number"
             class="form-control"
             placeholder="Price of the product"
-            ngModel
+            [ngModel]="initForm.price"
             name="price"
             required
             min="0"
@@ -50,7 +50,7 @@
             type="number"
             class="form-control"
             placeholder="Stocks of the product"
-            ngModel
+            [ngModel]="initForm.stock"
             name="stocks"
             customMin
             [minimo]="0"
