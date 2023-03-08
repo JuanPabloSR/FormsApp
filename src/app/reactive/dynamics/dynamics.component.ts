@@ -58,4 +58,8 @@ export class DynamicsComponent {
     console.log(this.myForm.value);
     this.myForm.reset();
   }
+
+  delete(i: number) {
+    this.favoritesArray.removeAt(i)
+  }
 }
