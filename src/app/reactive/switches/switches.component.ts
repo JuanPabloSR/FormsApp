@@ -24,7 +24,7 @@ export class SwitchesComponent implements OnInit {
     this.myForm.reset({...this.person, conditions: true});
 
     this.myForm.valueChanges.subscribe( ({conditions, ...rest}) =>  {
-      // delete form.conditions;
+
       this.person = rest;
     })
   }
