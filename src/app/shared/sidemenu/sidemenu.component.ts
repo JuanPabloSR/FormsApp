@@ -8,11 +8,13 @@ interface MenuItem {
 @Component({
   selector: 'app-sidemenu',
   templateUrl: './sidemenu.component.html',
-  styles: [`
-  li {
-    cursor:pointer;
-  }
-  `],
+  styles: [
+    `
+      li {
+        cursor: pointer;
+      }
+    `,
+  ],
 })
 export class SidemenuComponent {
   templateMenu: MenuItem[] = [
@@ -41,6 +43,16 @@ export class SidemenuComponent {
     {
       text: 'Switches',
       route: './reactive/switches',
+    },
+  ];
+  authMenu: MenuItem[] = [
+    {
+      text: 'Register',
+      route: './auth/register',
+    },
+    {
+      text: 'Login',
+      route: './auth/login',
     },
   ];
 }
